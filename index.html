@@ -4,7 +4,7 @@
   <title>Tux Text</title>
 <link rel='icon' type='image/png' href='https://findicons.com/files/icons/2166/oxygen/128/tux.png'>
 <head>
-  <link rel="preload" as="font" href="./MrBubbleFont.ttf" type="font/ttf" crossorigin="anonymous"/>
+  <link rel="preload" as="font" href="./MrBubbleFont.ttf" type="font/ttf"/>
 </head>
 <html>
 
@@ -17,13 +17,37 @@
             font-family: 'myFont';
             src: url('MrBubbleFont.ttf');
         }
+
+        body {
+            width: 100%;
+            min-height: 600px;
+            height: 100vh;
+            background-position: 0 0;
+            background-size: 100% 100%;
+            background: linear-gradient( rgb(47, 47, 248) 0%, rgb(47, 47, 248) 10%, rgb(83, 83, 248) 10%, rgb(83, 83, 248) 30%, rgb(119, 119, 250) 30%, rgb(119, 119, 250) 50%, rgb(158, 158, 247) 50%, rgb(158, 158, 247) 70% );
+        }
+        p, button {
+            font-weight: bold;
+            color: white;
+            font-family: myFont;
+            font-size: 18px;
+        }
+        button {
+                margin-bottom: 5px;
+        }
+        p, button {
+            margin-left: 5px;
+        }
+        p {
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
     </style>
 
 
     <form id="form" onsubmit="return false;">
         <p align="center">
             <input type="text" id="userInput" value='' />
-            <input type="button" value="SUBMIT" style="font-weight:bold" onclick="myFunction();" />
+            <input type="button" value="SUBMIT" style="background-color: #e7e7e7; color: black; font-weight: bold; font-family: myFont;" onclick="myFunction();" />
         </p>
     </form>
 
@@ -31,13 +55,13 @@
     <img id="scream" width="500" height="577" crossOrigin="anonymous" src="https://i.imgur.com/9NCQF3s.jpg" alt="The Scream" hidden>
 
     <p>Canvas:</p>
-    <canvas id="myCanvas" width="500" height="577" style="border:1px solid #d3d3d3;">
+    <canvas id="myCanvas" width="500" height="577" style="border: 5px solid #d3d3d3; margin-left: 5px;">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
   
       <br>
     <div id="createPNGButton">
-        <button onclick="saveImage()">Save as Image</button>
+        <button style="background-color: #e7e7e7; color: black; font-weight: bold" onclick="saveImage()">Save as Image</button>
     </div>
 
     <script>
@@ -47,10 +71,10 @@
                 var c = document.getElementById("myCanvas");
                 var ctx = c.getContext("2d");
                 var img = document.getElementById("scream");
-                ctx.drawImage(img, 10, 10);
+                ctx.drawImage(img, 0, 0);
                 ctx.font = '35px myFont';
                 ctx.textAlign = 'center';
-                ctx.fillText(data, 265, 380);
+                ctx.fillText(data, 255, 380);
             }
             else {
                 alert('Text is limited to 18 characters!');
