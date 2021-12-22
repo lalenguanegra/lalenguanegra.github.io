@@ -6,5 +6,5 @@ Font:
 
 https://www.dafont.com/mrbubblefont.font
 
-![Tux Text](https://i.imgur.com/3jJhyqql.jpeg)
+![Tux Text](https://i.imgur.com/kn3dbeRl.jpeg)
 
