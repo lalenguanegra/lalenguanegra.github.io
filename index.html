@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <title>Tux Text</title>
+<link rel='icon' type='image/png' href='https://findicons.com/files/icons/2166/oxygen/128/tux.png'>
+<head>
+    <link rel="preload" href="./MrBubbleFont.ttf" as="font"/>
+</head>
+<html>
+
+
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: 'myFont';
+            src: url('MrBubbleFont.ttf');
+        }
+    </style>
+
+
+    <form id="form" onsubmit="return false;">
+        <p align="center">
+            <input type="text" id="userInput" value='' />
+            <input type="button" value="SUBMIT" style="font-weight:bold" onclick="myFunction();" />
+        </p>
+    </form>
+
+
+    <img id="scream" width="500" height="577" src="https://i.imgur.com/9NCQF3s.jpg" alt="The Scream" hidden>
+
+    <p>Canvas:</p>
+    <canvas id="myCanvas" width="500" height="577" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+        function myFunction() {
+            var data = document.getElementById("userInput").value;
+            if (data.length < 18) {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("scream");
+                ctx.drawImage(img, 10, 10);
+                ctx.font = '35px myFont';
+                ctx.textAlign = 'center';
+                ctx.fillText(data, 265, 380);
+            }
+            else {
+                alert('Text is limited to 18 characters!');
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
