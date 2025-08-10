@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dreader</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" type="image/ico" href="images/favicon.png" />
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <script type="module">
+            import './js/entities/computer.class.js';
+            import './js/entities/director.class.js';
+            import './js/entities/maze.class.js';
+            import './js/entities/monster.class.js';
+            import './js/entities/player.class.js';
+            import './js/entities/transition.class.js';
+            import './js/entities/world.class.js';
+
+            import './js/core/gameclient.class.js';
+        </script>
+    </head>
+    <body>
+        <canvas>Canvas is not supported</canvas>
+
+        <div class="loading">LOADING</div>
+
+        <a class="show-credits" href="#" alt="show credits">SHOW CREDITS</a>
+
+        <div class="credits">
+            <h3>Developed by <a href="https://donitz.itch.io/" target="_blank">Donitz</a></h3>
+            <h3>Powered by <a href="https://threejs.org/" target="_blank">Three.js</a></h3>
+            <h3>Human models created using <a href="http://www.makehumancommunity.org/" target="_blank">MakeHuman</a></h3>
+            <!-- Credits content truncated for brevity -->
+        </div>
+        
+        <!-- itch.io script removed for offline play -->
+    </body>
+</html>
